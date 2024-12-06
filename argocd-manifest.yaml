@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/pauldeniyi1/test-argocd.git'
-    targetRevision: HEAD
+    targetRevision: main
     path: apache
   destination:
     server: 'https://kubernetes.default.svc'
@@ -16,3 +16,6 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+    - Validate=true
+    - ServerSideApply=true
