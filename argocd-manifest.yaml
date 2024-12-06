@@ -7,8 +7,8 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/pauldeniyi1/test-argocd.git'
-    targetRevision: main
-    path: apache
+    targetRevision: HEAD
+    path: .
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
